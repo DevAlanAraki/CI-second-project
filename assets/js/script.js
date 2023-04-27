@@ -98,10 +98,10 @@ const quizData = [
 ];
 
 /**
- * Each const gets the element for the Quiz: Question, Answer, alternatives and the button to confirm
+ * Each const gets the element for the Quiz: Question, choice, alternatives and the button to confirm
  */
 const quiz = document.getElementById('quiz');
-const answerElements = document.querySelectorAll('.answer');
+const choiceElements = document.querySelectorAll('.choice');
 const questionElements = document.getElementById('question');
 const text_a = document.getElementById('text_a');
 const text_b = document.getElementById('text_b');
@@ -129,27 +129,38 @@ function loadingQuiz() {
     text_d.innerText = currentQuizDetails.d;
 }
 
+/* Deselect the option that was chosen for the previous question. */
+
 function deselectOptions() {
-    answerElements.forEach(answerElements => answerElements.checked = false);
+    choiceElements.forEach(choiceElements => choiceElements.checked = false);
 }
 
-function getSelected() {
-    let answer;
+/**
+ * Capture the choice that the user opted for.
+ */
 
-    answerElements.forEach(answerElements => {
-        if (answerElements.checked) {
-        answer = answerElements.id;
+function getSelected() {
+    let choice;
+
+    choiceElements.forEach(choiceElements => {
+        if (choiceElements.checked) {
+        choice = choiceElements.id;
         }
     })
 
-    return answer;
+    return choice;
 }
 
+/**
+ * Listen the submit button and add the correct choice to the score
+ * and provide the result at the end of the quiz.
+ */
+
 submitButton.addEventListener('click', () => {
-    const answer = getSelected();
+    const choice = getSelected();
     
-    if (answer) {
-        if (answer === quizData[currentQuestion].correct) {
+    if (choice) {
+        if (choice === quizData[currentQuestion].correct) {
             score++;
         }
 

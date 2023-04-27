@@ -88,12 +88,37 @@ const quizData = [
         correct: "a"
     },
     {
-        question: "Which instrument is often called the "king of instruments"?",
+        question: "Which instrument is often called the king of instruments?",
         a: "Piano",
         b: "Violin",
         c: "Guitar",
         d: "Organ",
         correct: "d"
     },
+];
 
-]
+/**
+ * Each const gets the element for the Quiz: Question, Answer, alternatives and the button to confirm
+ */
+const quiz = document.getElementById('quiz');
+const answerElements = document.querySelectorAll('.answer');
+const questionElements = document.getElementById('question');
+const text_a = document.getElementById('text_a');
+const text_b = document.getElementById('text_b');
+const text_c = document.getElementById('text_c');
+const text_d = document.getElementById('text_d');
+const submitButton = document.getElementById('submit');
+
+/**
+ * As the quiz and score will be changing during the game and between the questions - using let to allow it
+ */
+let currentQuestion = 0;
+let score = 0;
+
+loadingQuiz();
+
+function loadingQuiz() {
+    const currentQuizDetails = quizData[currentQuestion];
+
+    questionElements.innerText = currentQuizDetails.question
+}

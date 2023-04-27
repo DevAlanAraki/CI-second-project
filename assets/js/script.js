@@ -118,7 +118,34 @@ let score = 0;
 loadingQuiz();
 
 function loadingQuiz() {
+    deselectOptions();
+
     const currentQuizDetails = quizData[currentQuestion];
 
-    questionElements.innerText = currentQuizDetails.question
+    questionElements.innerText = currentQuizDetails.question;
+    text_a.innerText = currentQuizDetails.a;
+    text_b.innerText = currentQuizDetails.b;
+    text_c.innerText = currentQuizDetails.c;
+    text_d.innerText = currentQuizDetails.d;
 }
+
+function deselectOptions() {
+    answerElements.forEach(answerElements => answerElements.checked = false);
+}
+
+function getSelected() {
+    let answer;
+
+    answerElements.forEach(answerElements => {
+        if (answerElements.checked) {
+        answer = answerElements.id;
+        }
+    })
+    
+    return answer;
+}
+
+submitButton.addEventListener('click', () => {
+    const answer = getSelected();
+    console.log(answer);
+})

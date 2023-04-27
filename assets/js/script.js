@@ -8,7 +8,7 @@ const quizData = [
         correct: "d"
     },
     {
-        question: "What is the largest planet in our solar system?What is the smallest planet in our solar system?",
+        question: "What is the smallest planet in our solar system?",
         a: "Mercury",
         b: "Venus",
         c: "Saturn",
@@ -141,11 +141,26 @@ function getSelected() {
         answer = answerElements.id;
         }
     })
-    
+
     return answer;
 }
 
 submitButton.addEventListener('click', () => {
     const answer = getSelected();
-    console.log(answer);
+    
+    if (answer) {
+        if (answer === quizData[currentQuestion].correct) {
+            score++;
+        }
+
+        currentQuestion++;
+
+        if (currentQuestion < quizData.length) {
+            loadingQuiz();
+        } else {
+            quiz.innerHTML = `<h2>Yey! You were right on ${score}/${quizData.length} questions.</h2>
+
+            <button onclick="location.reload()">Start again!</button>`
+        }
+    }
 })

@@ -105,7 +105,7 @@ const quizData = [
         c: "Guitar",
         d: "Organ",
         correct: "d",
-        imgRef: "solar system"
+        imgRef: "instruments"
     },
 ];
 

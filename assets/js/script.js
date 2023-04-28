@@ -5,7 +5,8 @@ const quizData = [
         b: "Two",
         c: "Three",
         d: "Four",
-        correct: "d"
+        correct: "d",
+        imgRef: "slug"
     },
     {
         question: "What is the smallest planet in our solar system?",
@@ -13,7 +14,8 @@ const quizData = [
         b: "Venus",
         c: "Saturn",
         d: "Jupiter",
-        correct: "a"
+        correct: "a",
+        imgRef: "solarsystem"
     },
     {
         question: "Which animal can change its color to match its surroundings?",
@@ -21,7 +23,8 @@ const quizData = [
         b: "Chameleon",
         c: "Lion",
         d: "Elephant",
-        correct: "b"
+        correct: "b",
+        imgRef: "camouflage"
     },
     {
         question: "What is the tallest animal in the world?",
@@ -29,7 +32,8 @@ const quizData = [
         b: "Elephant",
         c: "Giraffe",
         d: "Gorilla",
-        correct: "c"
+        correct: "c",
+        imgRef: "tallanimal"
     },
     {
         question: "What is the capital city of Australia?",
@@ -37,7 +41,8 @@ const quizData = [
         b: "Canberra",
         c: "Melbourne",
         d: "Brisbane",
-        correct: "b"
+        correct: "b",
+        imgRef: "capitalcity"
     },
     {
         question: "What is the largest mammal in the world?",
@@ -45,7 +50,8 @@ const quizData = [
         b: "African Elephant",
         c: "Hippopotamus",
         d: "Polar Bear",
-        correct: "a"
+        correct: "a",
+        imgRef: "largestanimal"
     },
     {
         question: "What is the name of the highest mountain in the world?",
@@ -53,7 +59,8 @@ const quizData = [
         b: "Mount Everest",
         c: "Mount Denali",
         d: "Mount Fuji",
-        correct: "b"
+        correct: "b",
+        imgRef: "mountain"
     },
     {
         question: "Which planet is closest to the Sun?",
@@ -61,7 +68,8 @@ const quizData = [
         b: "Mars",
         c: "Mercury",
         d: "Saturn",
-        correct: "c"
+        correct: "c",
+        imgRef: "sun"
     },
     {
         question: "Which type of animal is a penguin?",
@@ -69,7 +77,8 @@ const quizData = [
         b: "Reptile",
         c: "Bird",
         d: "Fish",
-        correct: "c"
+        correct: "c",
+        imgRef: "penguin"
     },
     {
         question: "What is the smallest continent in the world?",
@@ -77,7 +86,8 @@ const quizData = [
         b: "Australia",
         c: "Africa",
         d: "Europe",
-        correct: "b"
+        correct: "b",
+        imgRef: "continents"
     },
     {
         question: "How many bones are there in the human body?",
@@ -85,7 +95,8 @@ const quizData = [
         b: "306",
         c: "106",
         d: "406",
-        correct: "a"
+        correct: "a",
+        imgRef: "humanbones"
     },
     {
         question: "Which instrument is often called the king of instruments?",
@@ -93,7 +104,8 @@ const quizData = [
         b: "Violin",
         c: "Guitar",
         d: "Organ",
-        correct: "d"
+        correct: "d",
+        imgRef: "solar system"
     },
 ];
 
@@ -107,6 +119,7 @@ const text_a = document.getElementById('text_a');
 const text_b = document.getElementById('text_b');
 const text_c = document.getElementById('text_c');
 const text_d = document.getElementById('text_d');
+const questionImage = document.getElementById('questionImage');
 const submitButton = document.getElementById('submit');
 
 /**
@@ -121,16 +134,19 @@ function loadingQuiz() {
     deselectOptions();
 
     const currentQuizDetails = quizData[currentQuestion];
+    //Add image for each question
+    questionImage.src = `assets/images/${currentQuizDetails.imgRef}.jpg`;
 
     questionElements.innerText = currentQuizDetails.question;
     text_a.innerText = currentQuizDetails.a;
     text_b.innerText = currentQuizDetails.b;
     text_c.innerText = currentQuizDetails.c;
     text_d.innerText = currentQuizDetails.d;
+
+    
 }
 
 /* Deselect the option that was chosen for the previous question. */
-
 function deselectOptions() {
     choiceElements.forEach(choiceElements => choiceElements.checked = false);
 }

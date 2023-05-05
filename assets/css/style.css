@@ -12,10 +12,14 @@ body {
     margin: 0;
 }
 
-#quiz-container {
+#box-container {
+    height: 100%;
+}
+
+#container {
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 25px;
 }
 
 .container-quiz {
@@ -111,8 +115,9 @@ button:focus {
 footer {
     background: #1b67f2;
     height: auto;
-    width: 100vw;
+    width: 100%;
     color: #fff;
+    position: absolute;
 }
 
 .footer-dev-content {
@@ -127,6 +132,30 @@ footer {
     color: #fff;
 }
 
+/* In case the user has a screen that is smaller in height it will resize the quiz box automatically */
+@media screen and (max-height: 905px) {
+    #questionImage {
+        width: 90%;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul li {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+    }
+
+    #quiz-container {
+        margin-bottom: 35px;
+    }
+}
+
+/* In case the user has a small display or device it will resize automatically */
 @media screen and (max-width: 663px) {
 
     header {

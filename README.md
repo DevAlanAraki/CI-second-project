@@ -53,14 +53,6 @@ To use the Quiz Lab webpage, simply follow these steps:
 5. Continue to the next question and repeat steps 2-4.
 6. After answering all questions, view your score and see how well you did.
 
-## Credits
-
-The Quiz Lab webpage was created by Alan Araki as a personal project.
-
-The images used in the quiz were obtained from Google Images and Unsplash.
-
-The font used in the webpage was obtained from [Google Fonts](https://fonts.google.com).
-
 ## Testing
 
 * I tested playing this game multiple times in different browsers such as Firefox, Edge and Chrome.
@@ -73,7 +65,27 @@ The font used in the webpage was obtained from [Google Fonts](https://fonts.goog
 * Iconfirmed that this project is responsive, looks good and functions on all standard screens sizes using the devtoop device toolbar.
 
 ## Validator Testing
+
 * HTML
   * No errors were returned when passing through the official W3C validator.
 * CSS
   * No errors were found when passing through the official (Jigsaw) validator.
+
+## Unfixed bugs
+
+No unfixed bugs
+
+## Deployment
+
+* The site was deployed to GitHub pages. The steps to deploy are as follow:
+  * In the GitHub repository, navigate to the Settings tab.
+  * From the sourcesection drop-down menu, select the Master Branch.
+  * Once the master branch has been selected, the page provide the link to the completed and live website.
+
+The live link can be found here - [Quiz Lab Project](https://devalanaraki.github.io/CI-second-project/)
+
+## Credits
+
+* The Quiz Lab webpage was created by Alan Araki as a personal project.
+* The images used in the quiz were obtained from Google Images and Unsplash.
+* The font used in the webpage was obtained from [Google Fonts](https://fonts.google.com).

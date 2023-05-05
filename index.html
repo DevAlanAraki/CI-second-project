@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel='shortcut icon' type='image/x-icon' href='assets/images/favicon.ico'/>
-    
-    <title>Don't you love a quiz?</title>
+    <link rel='shortcut icon' type='image/x-icon' href='assets/images/favicon.ico' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+
+    <title>Quiz Lab - Don't you love a quiz?</title>
 </head>
+
 <body>
-    <div class="container-quiz" id="quiz">
-        <div class="header-quiz">
-            <h2 id="question">Questionary</h2>
+    <header>
+            <img src="/assets/images/logo.png" alt="Quiz Lab log">
+        <h1 class="slogan">Quiz Lab presents - Do you know?</h1>
+    </header>
+    <section id="quiz-container">
+        <div class="container-quiz" id="quiz">
+            <div class="header-quiz">
+                <h2 id="question">Questionary</h2>
 
-            <img id="questionImage" src="">
-            <ul>
-                <li>
-                    <input type="radio" id="a" name="choice" class="choice">
-                    <label for="a" id="text_a">Question</label>
-                </li>
-                
-                <li>
-                    <input type="radio" id="b" name="choice" class="choice">
-                    <label for="b" id="text_b">Question</label>
-                </li>
+                <img id="questionImage" src="">
+                <ul>
+                    <li>
+                        <input type="radio" id="a" name="choice" class="choice">
+                        <label for="a" id="text_a">Question</label>
+                    </li>
 
-                <li>
-                    <input type="radio" id="c" name="choice" class="choice">
-                    <label for="c" id="text_c">Question</label>
-                </li>
+                    <li>
+                        <input type="radio" id="b" name="choice" class="choice">
+                        <label for="b" id="text_b">Question</label>
+                    </li>
 
-                <li>
-                    <input type="radio" id="d" name="choice" class="choice">
-                    <label for="d" id="text_d">Question</label>
-                </li>
-            </ul>
+                    <li>
+                        <input type="radio" id="c" name="choice" class="choice">
+                        <label for="c" id="text_c">Question</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" id="d" name="choice" class="choice">
+                        <label for="d" id="text_d">Question</label>
+                    </li>
+                </ul>
+            </div>
+
+            <button id="submit">Submit</button>
         </div>
+    </section>
 
-        <button id="submit">Submit</button>
-    </div>
+    <footer>
+        <div class="footer-dev-content">
+            <p>copyright &copy;2021 <a href=”#”>Alan Araki</a>  </p>
+        </div>
+    </footer>
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

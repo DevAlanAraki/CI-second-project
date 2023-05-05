@@ -8,24 +8,49 @@ body {
     background-color: #b8c6db;
     background-image: linear-gradient(315deg, #87edff 0%, #f5f7fa 100%);
     font-family: 'Poppins', sans-serif;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+#quiz-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
 }
 
 .container-quiz {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 01);
-    width: 600px;
     overflow: hidden;
+    margin: 0 20px;
+}
+
+header {
+    display: flex;
+    padding: 2rem 0;
+    justify-content: center;
+}
+
+header>img {
+    width: 210px;
+    max-height: 175px;
+    max-width: 210px;
+}
+
+.slogan {
+    display: flex;
+    font-size: 2.4rem;
+    align-items: center;
+    font-family: 'Sigmar', cursive;
+    background: -webkit-linear-gradient(#025cb1, #1d7dfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .header-quiz {
-    padding: 4rem;
+    padding: 3rem 2rem 1rem 2rem;
 }
 
 #questionImage {
@@ -52,8 +77,11 @@ ul {
 }
 
 ul li {
-    font-size: 1.2rem;
-    margin: 1rem 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
 }
 
 ul li label {
@@ -79,4 +107,67 @@ button:hover {
 button:focus {
     outline: none;
     background-color: #2789b6;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1b67f2;
+    height: auto;
+    width: 100vw;
+    color: #fff;
+}
+
+.footer-dev-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-dev-content a {
+    color: #fff;
+}
+
+@media screen and (max-width: 663px) {
+    body {
+        overflow: hidden;
+    }
+
+    header {
+        display: grid;
+        justify-items: center;
+    }
+
+    .header-quiz {
+        padding: 1rem;
+    }
+
+    header>img {
+        width: 40%;
+        height: auto;
+    }
+
+    .slogan {
+        font-size: 2.3rem;
+    }
+
+    #questionImage {
+        width: 90%;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul li {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+    }
 }

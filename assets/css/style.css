@@ -9,21 +9,19 @@ body {
     background-image: linear-gradient(315deg, #87edff 0%, #f5f7fa 100%);
     font-family: 'Poppins', sans-serif;
     height: 100%;
-    overflow: hidden;
     margin: 0;
 }
 
 #quiz-container {
     display: flex;
-    align-items: center;
     justify-content: center;
+    margin-bottom: 100px;
 }
 
 .container-quiz {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 01);
-    overflow: hidden;
     margin: 0 20px;
 }
 
@@ -110,9 +108,6 @@ button:focus {
 }
 
 footer {
-    bottom: 0;
-    left: 0;
-    right: 0;
     background: #1b67f2;
     height: auto;
     width: 100vw;
@@ -125,7 +120,6 @@ footer {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    margin-top: 30px;
 }
 
 .footer-dev-content a {
@@ -133,9 +127,6 @@ footer {
 }
 
 @media screen and (max-width: 663px) {
-    body {
-        overflow: hidden;
-    }
 
     header {
         display: grid;
@@ -169,5 +160,9 @@ footer {
     ul li {
         font-size: 1.2rem;
         margin: 1rem 0;
+    }
+
+    #quiz-container {
+        margin-bottom: 35px;
     }
 }

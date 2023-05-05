@@ -43,6 +43,7 @@ header>img {
     align-items: center;
     font-family: 'Sigmar', cursive;
     background: -webkit-linear-gradient(#025cb1, #1d7dfa);
+    background-clip: inherit;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

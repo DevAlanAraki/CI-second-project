@@ -1,39 +1,79 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Quiz Lab presents - Do you know?
 
-Welcome,
+Welcome to Quiz Lab, an interactive quiz webpage that tests your knowledge on a variety of topics. The quiz features multiple-choice questions, each with four possible answers. Choose the answer you think is correct and click the "Submit" button to see if you got it right!
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Using "Am I Responsive" feature. This tools allows me to get what I need quickly, and hopefully it can be helpful for showing your more visual clients what you mean by responsive design when a suite of products isn’t at the ready.](/assets/images/devices.jpg)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **March 3rd, 2023**
+## Technologies Used
 
-## Codeanywhere Reminders
+The webpage was built using the following technologies:
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+* HTML5
+* CSS3
+* JavaScript
 
-`python3 -m http.server`
+## Features
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+The Quiz Lab webpage includes the following features:
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+* The header
 
-`http_server`
+  * A header with the Quiz Lab logo and a slogan.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![Header of the webpage](/assets/images/header.jpg)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+* The quiz
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  * A quiz section with a container for displaying questions and answer choices.
+  
+  * Each question includes an image that is related to the challenge and four answer choices.
 
-To log into the Heroku toolbelt CLI:
+  * A submit button to submit your answer.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![The quiz game](/assets/images/game.jpg)
+  
+  * View your socre.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![The quiz result](/assets/images/result.jpg)
 
----
+* The footer
 
-Happy coding!
+  * A footer with the developer's name and a copyright notice.
+
+![Footer](/assets/images/footer.jpg)
+
+## How to Use
+
+To use the Quiz Lab webpage, simply follow these steps:
+
+1. Open the webpage in your browser.
+2. Read the question and answer choices.
+3. Select the answer you think is correct by clicking the corresponding radio button.
+4. Click the "Submit" button to see if you got the question right.
+5. Continue to the next question and repeat steps 2-4.
+6. After answering all questions, view your score and see how well you did.
+
+## Credits
+
+The Quiz Lab webpage was created by Alan Araki as a personal project.
+
+The images used in the quiz were obtained from Google Images and Unsplash.
+
+The font used in the webpage was obtained from [Google Fonts](https://fonts.google.com).
+
+## Testing
+
+* I tested playing this game multiple times in different browsers such as Firefox, Edge and Chrome.
+* The game output the correct result for the user.
+* I confirmed that the header, options, results and footer are all readable and easy to understand as the game is indicated for kids.
+* I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse.
+
+![Lighthouse report](/assets/images/lighthouse-report.jpg)
+
+* Iconfirmed that this project is responsive, looks good and functions on all standard screens sizes using the devtoop device toolbar.
+
+## Validator Testing
+* HTML
+  * No errors were returned when passing through the official W3C validator.
+* CSS
+  * No errors were found when passing through the official (Jigsaw) validator.
